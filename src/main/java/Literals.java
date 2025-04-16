@@ -1,34 +1,48 @@
-/**
- * Lernziel: Literale
- * - Literaltypen kennenlernen
- * - Hexadezimalzahlen schreiben
- * - Binäre Schreibweise
- * - Unterstriche in Zahlen
- *
- * @see Types
- */
 public class Literals {
-  /*
-   *  - die Wahrheitswerte `true` und `false`
-   *  - integrale Literale für Zahlen, etwa `122`
-   *  - Fließkommaliterale, etwa `12.567` oder `9.999E-2`
-   *  - Zeichenliterale, etwa `'X'` oder `'\n'`
-   *  - String-Literale für Zeichenketten, wie `"Mandalore"`
-   *  - `null` steht für einen besonderen Referenztyp
-   */
   public static void main( String[] args ) {
-    System.out.println(0.1+0.1+0.1);
-    System.out.println('\n');
-    System.out.println(123);
-    System.out.println("'\"");
-    System.out.println('\'');
-    System.out.println(0x0); // 0
-    System.out.println(0x9); // 9
-    System.out.println(0xa); // 10
-    System.out.println(0xf); // 15
-    System.out.println(0x1000_0000);
-    System.out.println(0b101_01001010_10011001);
-    System.out.println(236_547_823);
+ /*
+  │  Example               │  Description
+  ├────────────────────────┼──────────────────────────────────────────────────
+  │  1234567890, -3        │  Integer literal
+  │  1234567890123456789L  │  Long integer literal
+  │  3.14                  │  Floating-point number literal (double precision)
+  │  2.5f                  │  Floating-point number literal (single precision)
+  │  1e6                   │  Floating-point number in scientific/exponential notation
+  │  'A'                   │  Character literal
+  │  "Hello, World!"       │  String literal
+  │  """                   │⎧
+  │  Java Rocks!           │⎨ Multi-Line String literal, aka Text-Block
+  │  Coding is Fun"""      │⎩
+  │  true, false           │  Boolean literal
+  │  null                  │  Null literal
+  */
 
+    System.out.println( 8723568923L );
+    System.out.println( 2345.345345345353 );
+    System.out.println( -12.222E-12 );
+    System.out.println( ' ' );
+    System.out.println( "Hello" );
+    System.out.println( """
+                            A
+                            B
+                            C""" );
+    System.out.println( false );
+    System.out.println( true );
+
+ /*
+  │ Example                │  Description for numeric/radix prefixes
+  ├────────────────────────┼──────────────────────────────────────────────────
+  │  0b101010              │  Binary (Base 2) integer literal
+  │  052                   │  Octal (Base 8) integer literal
+  │  0x2A                  │  Hexadecimal (Base 16) integer literal
+  */
+
+    System.out.println( 0b11 );
+    System.out.println( 0777 );
+    System.out.println( 0xFF );
+
+    System.out.println( 1_000_000_000 );
+    System.out.println( 111.111_111 );
+    System.out.println( 0b11111111_00000000 );
   }
 }

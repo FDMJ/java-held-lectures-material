@@ -1,23 +1,29 @@
-/**
- * Lernziel: Eingaben von der Konsole einlesen
- * - Ganzzahl vom Typ int einlesen
- * - double einlesen
- * - String einlesen
- *
- * @see IfStatement
- */
 public class ConsoleInputs {
   public static void main( String[] args ) {
-    System.out.println("Bitte Produktname eingeben: ");
-    String name = new java.util.Scanner( System.in ).nextLine();
 
-    System.out.println("Bitte kcal eingeben: ");
+    /*
+     Write: System.out, System.err
+     Read: System.in
+     */
+
+    System.out.println( "Please enter product name: " );
+    String name = new java.util.Scanner( System.in ).nextLine();
+    // String name = new java.util.Scanner( System.in ).next();
+
+    System.out.println( "Please enter kcal: " );
     double kcal = new java.util.Scanner( System.in ).nextDouble();
 
-    System.out.println("Bitte Anzahl Produkte eingeben: ");
+    System.out.println( "Please enter the number of products: " );
     int number = new java.util.Scanner( System.in ).nextInt();
 
-    System.out.println("Name: " + name);
-    System.out.printf("Gesamtanzahl kcal: %.2f%n", number*kcal);
+    System.out.println( name );
+    System.out.println( kcal );
+    System.out.printf( "%.2f%n", kcal );
+    System.out.println( number );
+
+    /*
+     */
+
+    // Console
   }
 }

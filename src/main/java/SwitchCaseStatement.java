@@ -1,39 +1,30 @@
-/**
- * Lernziel: `switch`-`case`-Anweisung
- * - `switch` und `case`-Blöcke
- * - `default`
- * - Durchfallen
- * - Stack-Case-Labels
- *
- * @see DoWhileLoop
- */
 public class SwitchCaseStatement {
   public static void main( String[] args ) {
-    int random = (int)(Math.random() * 3); // 0, 1, 2
-    final int ZERO = 0;
-    switch ( random ) {
-      case ZERO:
-        System.out.println("rot");
-        break;
-      case 1:
-        System.out.println("grün");
-        break;
-      case 2:
-        System.out.println("blau");
-        break;
-    }
+    double x = new java.util.Scanner( System.in ).nextDouble();
+    String operator = new java.util.Scanner( System.in ).next();
+    double y = new java.util.Scanner( System.in ).nextDouble();
 
-    String input = "Ice";
-    switch ( input ) {
-      case "Schokolade":
-        System.out.println("Schoki");
-        break;
-      case "Eis" :
-      case "Ice" :
-        System.out.println("Eis");
-        break;
-      default:
-        System.out.println("Etwas anderes, ist das essbar?");
+    //    if ( operator.equals( "+" ) )
+    //      System.out.println( x + y );
+    //    else if ( operator.equals( "-" ) )
+    //      System.out.println( x - y );
+    //    else if ( operator.equals( "*" ) )
+    //      System.out.println( x * y );
+    //    else if ( operator.equals( "/" ) )
+    //      System.out.println( x / y );
+
+    //       v v v v         Selector Expression
+    switch ( operator ) {  // char, byte, short, **int**, Character, Byte, Short, Integer, String, enum
+      case "+" -> System.out.println( x + y );
+      case "-" -> System.out.println( x - y );
+      case "*", "×" -> System.out.println( x * y );
+      case "/" -> {
+        if ( y != 0 )
+          System.out.println( x / y );
+        else
+          System.out.println( "I will not try to divide by zero" );
+      }
+      case null, default -> System.out.println( "Unknown operator " + operator );
     }
   }
 }

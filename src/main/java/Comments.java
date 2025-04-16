@@ -1,19 +1,23 @@
+/*
+
+ LICENSE
+
+ */
+
 /**
- * Lernziel: Kommentartypen
- * - Zeilenkommentar
- * - Blockkommentar
- * - Javadoc
- *
- * @see Literals
+ * This is the main class.
  */
 public class Comments {
-   // Zeilenkommentar //
+  // Comment
+
+  /// - Item 1
+  /// - Item 2
 
   /**
-   * Hauptprogramm.
-   *
-   * @param args Übergabe an die JVM.
+   * This is the starting point of my Java program.
+   * <ul></ul>
+   * @param args  Program argument.
    */
-  public static void main( String[] args ) {
+  public static void main( String[] args ) {   // (1)
   }
 }

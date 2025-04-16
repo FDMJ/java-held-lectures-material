@@ -1,29 +1,35 @@
-/**
- * Lernziel: `switch`-Ausdrücke (Java 14)
- *
- * @see OopNew
- */
 public class SwitchExpression {
   public static void main( String[] args ) {
-
-    String operator = "+";
+    int x = 12;
+    int y = 0;
+    String operator = "/";
 
     //    switch ( operator ) {
-    //      case "+" -> System.out.println( "Plus" );
-    //      case "-" -> System.out.println( "Minus" );
-    //      case "x", "*" -> System.out.println( "Mal" );
-    //      default -> System.out.println( "Unbekannter Operator" );
+    //      case "+" -> System.out.println( "" + (x + y) );
+    //      case "-" -> System.out.println( "" + (x - y) );
+    //      default -> System.out.println( "Unknown operator" );
     //    }
 
-    String s = switch ( operator ) {
-      case "+" -> {
-        System.out.println( "Hier bin ich" );
-        yield "Plus";
+    //    String result = switch ( operator ) {
+    //      case "+" -> "" + (x + y);
+    //      case "-" -> "" + (x - y);
+    //      default -> "Unknown operator";
+    //    };
+    //    System.out.println( result );
+
+    System.out.println( switch ( operator ) {
+      case "+" -> "" + (x + y);
+      case "-" -> "" + (x - y);
+      // 'switch' expression does not cover all possible input values
+      case "/" -> {
+        if ( y == 0 ) {
+          System.err.println( "Divisor is zero" );
+          yield -1;
+        }
+        yield "" + x / y;
       }
-      case "-" -> "Minus";
-      case "x", "*" -> "Mal";
-      default -> "Unbekannter Operator";
-    };
-    System.out.println( s );
+      default -> "Unknown operator";
+    } );
+
   }
 }

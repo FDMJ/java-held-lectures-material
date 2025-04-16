@@ -1,17 +1,13 @@
-/**
- * Lernziel: Grundbegriffe
- * - Klassen > Methoden > Code
- * - `main(...)`-Methode
- * - Bezeichner
- * - Groß-/Kleinschreibung
- * - Reservierte Schlüsselwörter
- * - Modifizierer
- * - Einrückung
- *
- * @see Comments
- */
 public class Application {
+  // Method
   public static void main( String[] args ) {
-    System.out.println( "Hallo Welt!" );
+    // Statements
+    System.out.println( "Hello World!" );
   }
 }
+
+// Identifier: Application, main
+// Class: Uppercase, Method/variable: lowercase
+// Keywords: class, public, static, void
+// Modifier: public static
+// class > methods > statements

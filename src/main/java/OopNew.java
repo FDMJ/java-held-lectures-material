@@ -1,48 +1,50 @@
-/**
- * Lernziel: Objekte erzeugen und Eigenschaften ansprechen
- * - Objekte haben: Eine Identität, einen Zustand, ein Verhalten
- * - Objekte mit `new` erzeugen können
- * - Konstruktoraufruf
- * - Referenzvariablen deklarieren
- * - Referenztyp, Objekttyp
- * - Mit dem Punkt auf Attribute und Methoden zurückgreifen
- * - `toString()` Abkürzung
- *
- * @see NullNullPointerException
- */
 public class OopNew {
   public static void main( String[] args ) {
 
-    System.out.println(new java.awt.Point());
+    new java.awt.Point();    // Constructor call
+
+    System.out.println( new java.awt.Point() );   // java.awt.Point[x=0,y=0]
+
     java.awt.Point p = new java.awt.Point();
-    java.awt.Point q;
-    q = new java.awt.Point();
 
-    p.x = 10;
-    System.out.println(p.x);
-    System.out.println(p.y);
+    /*
+                            ┌────────┐
+                            │ :Point │
+      ┌─────┐               │ ────── │
+      │  p  ├──────────────►├────────┤
+      └─────┘               │ x=0    │
+                            │ y=0    │
+                            └────────┘
+    */
 
-    System.out.println(q.x);
-    System.out.println(q.y);
+    java.awt.Point q = new java.awt.Point();
 
-    p.setLocation( 11, 22 );
-    System.out.println(p.toString());
-    System.out.println(q.toString());
-    System.out.println(p);
-    System.out.println(q);
+    /*
+                            ┌────────┐
+                            │ :Point │
+      ┌─────┐               │ ────── │
+      │  p  ├──────────────►├────────┤
+      └─────┘               │ x=0    │
+                            │ y=0    │
+                            └────────┘
+                            ┌────────┐
+                            │ :Point │
+      ┌─────┐               │ ────── │
+      │  q  ├──────────────►├────────┤
+      └─────┘               │ x=0    │
+                            │ y=0    │
+                            └────────┘
+    */
 
-    String s = p.toString();
-    System.out.println(s.length());
-    // ->
-    System.out.println(p.toString().length());
-    //                 ------------ => String
+    String s = "";
 
-    System.out.println(new java.awt.Point().toString().length());
-
-    // Referenztyp             Objekttyp
+    /*
+    Reference Type             Object Type
+     */
     java.awt.Polygon polygon = new java.awt.Polygon();
 
-//    java.awt.Point a = new java.awt.Polygon();
-//    long a = new java.awt.Polygon();
+    // java.awt.Point a = new java.awt.Polygon();
+    // long a = new java.awt.Polygon();
+    // boolean b = 234234;
   }
 }
